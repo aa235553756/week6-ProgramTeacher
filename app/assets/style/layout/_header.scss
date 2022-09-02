@@ -1,0 +1,40 @@
+.navbar{
+  position: relative;
+    &-brand{
+      @include pad-lg {
+        height: 42px;
+        content: url(../../assets/images/logo.svg);
+      }
+    }
+    &-logo{
+        width: 24px;
+        height: 24px;
+        @include pad-lg {
+          width: auto;
+          height: 42px;
+        }
+    }
+    &-toggler{
+        width: 24px;
+        height: 24px;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      top: 70px;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg,$primary 50%,$secondary 50%);
+      @include pad-lg{
+        top: 90px;
+      }
+    }
+    &-collapse{
+      position: relative;
+      top: 24px;
+      line-height: 26px;
+      @include pad-lg{
+        position: unset;
+      }
+    }
+}

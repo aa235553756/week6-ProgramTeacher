@@ -1,0 +1,141 @@
+.banner{
+  background-image: url(../../assets/images/bg_home_mobile.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding-top: 85px;
+  padding-bottom: 85px;
+  @include pad-sm{
+    background-size: contain;
+  }
+  @include pad {
+    background-image: url(../../assets/images/bg_home.jpg);
+    background-size: cover;
+  }
+  @include pad-lg{
+    padding-top: 205px;
+    padding-bottom: 205px;
+  }
+  &__content{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include pad-lg{
+      padding-top: 52px;
+      padding-bottom: 52px;
+    }
+  }
+  &__title{
+    font-size: 24px;
+    @include pad {
+      font-size: 32px;
+    }
+    @include pc {
+      font-size: 48px;
+    }
+  }
+  &__para{
+   font-size: 14px;
+   @include pad{
+    font-size: 18px;
+   }
+  }
+  & .square{
+    width: 10px;
+    height: 10px;
+    transform: translate(50%,50%);
+  }
+}
+
+.feature{
+  &__title{
+    &::after{
+      @include pad-lg{
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+  & .card{
+    border-radius: 12px;
+    &-title{
+      font-size: 18px;
+    }
+    &-text{
+      font-size: 18px;
+    }
+    background: $dark;
+    color: white;
+    @include pad-lg{
+        cursor: pointer;
+        background: $light;
+        color: $gray-600;
+        & .text-gradient{
+          color: $gray-600;
+        }
+        &:hover{
+          outline: 1px solid $primary;
+          background: $gray;
+          color: white;
+          & .text-gradient{
+            color: transparent;
+          }
+        }
+      }
+  }
+}
+
+.procedure{
+  & .card{
+    padding-right: 32px;
+    padding-left: 32px;
+    @include pad{
+      padding-right: 0;
+      padding-left: 0;
+      text-align: center;
+    }
+    @include pc{
+      padding-left: 16px;
+      text-align: left;
+    }
+    @include pc-lg{
+      padding-right: 32px;
+      padding-left: 32px;
+      text-align: left;
+    }
+    &-number{
+      top: 0;
+      transform: translateY(-50%);
+      @include pad{
+        left: 10%;
+      }
+      @include pc-lg{
+        left: auto;
+      }
+    }
+    &-title{
+      font-size: 24px;
+    }
+    &-text{
+      font-size: 18px;
+      @include pad-lg{
+        font-size: 16px;
+      }
+      @include pc{
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.course{
+  & .card{
+    border-radius: 24px;
+    &:hover{
+      outline: 1px solid $primary;
+    }
+  }
+  & .price{
+    font-size: 32px;
+    vertical-align: sub;
+  }
+}
+

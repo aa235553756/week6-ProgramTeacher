@@ -1,0 +1,33 @@
+@mixin pc-lg {
+    @media (min-width:1400px) {
+        @content;
+    }    
+}
+
+@mixin pc{
+    @media (min-width:1200px) {
+        // 大於過1200開啟，皆為PC版
+        @content;
+    }
+}
+
+// pad-rande 1199~375
+@mixin pad-lg{
+    @media (min-width:992px) {
+        // 大於過992開啟，~1200為平板，上下為pad版(用在header，因為992才展開navbar)
+        @content;
+    }
+}
+
+@mixin pad {
+    @media (min-width:768px) {
+        // 大於過768開啟，~992為平板區域，下為手機版
+        @content;
+    }
+}
+
+@mixin pad-sm {
+    @media (min-width:375px) {
+        @content;
+    }
+}
