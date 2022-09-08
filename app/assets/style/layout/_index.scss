@@ -139,3 +139,62 @@
   }
 }
 
+.overlay{
+  & .card{
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    &-title{
+      &::after{
+        @include pad-lg{
+          margin-right: 0;
+          margin-left: 0;
+        }
+      }
+    }
+    & .material-icons{
+      color: rgba(255,255,255,0.5);
+    }
+    &-body{
+      z-index: 1;
+      padding: 40px;
+      background: rgba(0,0,0,0.9);
+      &:hover{
+        background: rgba(0,0,0,0.5);
+        & .card-text{
+          color: rgba(255, 255, 255, 1);
+        }
+        & .material-icons{
+          color: $primary;
+        }
+      }
+      @include pad{
+        padding: 52px 40px;
+      }
+      @include pad-lg{
+        padding: 215px 44px;
+      }
+    }
+    &-text{
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &__list{
+    &:nth-child(1) .card{
+      background-image: url(../../../assets/images/info01.jpg);
+    }
+    &:nth-child(2) .card{
+      background-image: url(../../../assets/images/info02.jpg);
+    }
+    &:nth-child(3) .card{
+      background-image: url(../../../assets/images/info03.jpg);
+    }
+    &:nth-child(4) .card{
+      background-image: url(../../../assets/images/info04.jpg);
+    }
+  }
+}
+
+.article{
+  background: #000;
+}
