@@ -149,6 +149,7 @@
         @include pad-lg{
           margin-right: 0;
           margin-left: 0;
+          background: rgba(255,255,255,0.5);
         }
       }
     }
@@ -166,6 +167,9 @@
         }
         & .material-icons{
           color: $primary;
+        }
+        & .card-title:after{
+          background: $primary;
         }
       }
       @include pad{
@@ -196,5 +200,9 @@
 }
 
 .article{
-  background: #000;
+  & .card:hover{
+    & .squareRounded{
+      display: block;
+    }
+  }
 }

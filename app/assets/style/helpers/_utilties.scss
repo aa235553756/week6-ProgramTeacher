@@ -65,3 +65,29 @@
 .opacity-50{
     opacity: 0.5;
 }
+
+.squareRounded{
+    width: 32px;
+    height: 32px;
+    display: none;
+    &-topLeft{
+        border-top-left-radius: 10px;
+        border-top: 1px solid $primary;
+        border-left: 1px solid $primary;
+    }
+    &-topRight{
+        border-top-right-radius: 10px;
+        border-top: 1px solid $primary;
+        border-right: 1px solid $primary;
+    }
+    &-bottomLeft{
+        border-bottom-left-radius: 10px;
+        border-bottom: 1px solid $primary;
+        border-left: 1px solid $primary;
+    }
+    &-bottomRight{
+        border-bottom-right-radius: 10px;
+        border-bottom: 1px solid $primary;
+        border-right: 1px solid $primary;
+    }
+}
