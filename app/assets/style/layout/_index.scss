@@ -49,6 +49,9 @@
   &__title{
     &::after{
       @include pad-lg{
+        color: #000;
+      }
+      @include pc{
         margin-right: 0;
         margin-left: 0;
       }
@@ -154,7 +157,10 @@
       }
     }
     & .material-icons{
-      color: rgba(255,255,255,0.5);
+      color: $primary;
+      @include pad-lg{
+        color: rgba(255,255,255,0.5);
+      }
     }
     &-body{
       z-index: 1;
@@ -176,11 +182,17 @@
         padding: 52px 40px;
       }
       @include pad-lg{
+        padding: 215px 32px;
+      }
+      @include pc{
         padding: 215px 44px;
       }
     }
     &-text{
-      color: rgba(255, 255, 255, 0.5);
+      color: $white;
+      @include pad-lg{
+        color: rgba(255, 255, 255, 0.5);
+      }
     }
   }
   &__list{
@@ -204,5 +216,183 @@
     & .squareRounded{
       display: block;
     }
+  }
+}
+
+.join{
+  & .card{
+    border-radius: 24px;
+  }
+  & .material-icons{
+    font-size: 105px;
+  }
+  & .btn{
+    flex-shrink: 0;
+  }
+}
+
+.footer{
+  background: #1A1A1A;
+  color: $footer-gray;
+  font-size: 12px;
+  @include pad-lg{
+    font-size: 16px;
+  }
+}
+
+// btn-scrollbar
+.btn-scrollbar{
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 6px;
+    display: none;
+    @include pad-lg{
+      display: block;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-600;
+    border-radius: 16px;
+    border: 6px solid transparent;
+  }
+  & .btn{
+    border: 1px solid #fff;
+    &:hover{
+        color: $primary;
+        border-color: $primary;
+    }
+  }
+}
+
+// swiper
+.swiper{
+  background: black;
+  @include pad-lg{
+    background-size: contain;
+    background-image: url(../images/bg_share.jpg);
+  }
+  & h2 :nth-child(2){
+    @include pad{
+      display: none;
+    }
+  }
+  &-pagination{
+    position: relative;
+    &-bullet{
+      background: $primary;
+      opacity: 1;
+      &-active{
+        width: 24px;
+        border-radius: 4px;
+        background: $primary;
+      }
+    }
+    &-bullets.swiper-pagination-horizontal{
+      width: auto;
+      bottom: 0;
+    }
+  }
+  &-pagegroup{
+    @include pad-lg{
+      margin-left: 54px;
+    }
+  }
+  &-button{
+    &-prev,&-next{
+      margin-top: 0;
+      height: auto;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      position: relative;
+    }
+    &-prev::after,&-next::after{
+      content: "";
+    }
+    &-prev{
+      left: -14px;
+    }
+    &-next{
+      left: 14px;
+    }
+  }
+  & .card{
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 24px;
+    &-img{
+      width: 80px;
+      height: 80px;
+      right: 32px;
+      transform: translate(0%,-30px);
+      @include pad-lg{
+        width: 100px;
+        height: 100px;
+        transform: translate(0%,-50%);
+      }
+    }
+    &-title{
+      color: #494755;
+    }
+    &-text{
+      color: #494755;
+    }
+  }
+}
+
+// swipe
+.swipe{
+  &-img{
+    border-radius: 24px;
+    top: -6px;
+    left: 6px;
+    @include pad-lg{
+      top: -10px;
+      left: 10px;
+    }
+    &-border{
+      border-radius: 24px;
+      outline: 1px solid #7C7E77;
+      width: calc(100% - 6px);
+      // top: 10px;
+      // left: -10px;
+      @include pad-lg{
+        margin-left: 27px;
+        width: 100%;
+        top: 10px;
+        left: -10px;
+      }
+    }
+  }
+  &-comment{
+    @include pad-lg{
+      margin-left: -27px;
+      margin-right: 27px;
+      bottom: -48px;
+    }
+  }
+}
+
+.intro{
+  & .btn{
+    border-radius: 8px;
+  }
+  & .card{
+    border-radius: 24px;
+    &:hover{
+      outline: 1px solid $primary;
+    }
+    &-footer{
+      border: none;
+      flex-shrink: 0;
+      @include pad-lg{
+        width: 168px;
+      }
+    }
+  }
+  & .price{
+    font-size: 32px;
   }
 }
