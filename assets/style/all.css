@@ -14289,19 +14289,19 @@ fieldset:disabled .btn {
 }
 
 .overlay__list:nth-child(1) .card {
-  background-image: url(../../../assets/images/info01.jpg);
+  background-image: url(../images/info01.jpg);
 }
 
 .overlay__list:nth-child(2) .card {
-  background-image: url(../../../assets/images/info02.jpg);
+  background-image: url(../images/info02.jpg);
 }
 
 .overlay__list:nth-child(3) .card {
-  background-image: url(../../../assets/images/info03.jpg);
+  background-image: url(../images/info03.jpg);
 }
 
 .overlay__list:nth-child(4) .card {
-  background-image: url(../../../assets/images/info04.jpg);
+  background-image: url(../images/info04.jpg);
 }
 
 .article .card:hover .squareRounded {
